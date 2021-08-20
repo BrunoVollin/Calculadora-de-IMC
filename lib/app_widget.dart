@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ola_mundo/login_page.dart';
+import 'package:ola_mundo/calculadora_page.dart';
 
 class AppWidget extends StatelessWidget {
   @override
@@ -8,7 +8,7 @@ class AppWidget extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.cyan,
       ),
-      home: LoginPage(),
+      home: CalculadoraIMC(),
     );
   }
 }

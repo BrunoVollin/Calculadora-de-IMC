@@ -2,14 +2,14 @@ import 'dart:ffi';
 import 'dart:math';
 import 'package:flutter/material.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({Key? key}) : super(key: key);
+class CalculadoraIMC extends StatefulWidget {
+  const CalculadoraIMC({Key? key}) : super(key: key);
 
   @override
-  _LoginPageState createState() => _LoginPageState();
+  _CalculadoraIMCState createState() => _CalculadoraIMCState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _CalculadoraIMCState extends State<CalculadoraIMC> {
   double peso = 0.0;
   double altura = 0.0;
   double imc = 0.0;
@@ -37,7 +37,7 @@ class _LoginPageState extends State<LoginPage> {
     return "ERRO";
   }
 
-  licandoComClick() {
+  lidandoComClick() {
     double newImc = calculaIMC(peso, altura);
     setState(() {
       imc = (newImc > 0) ? calculaIMC(peso, altura) : 0;
@@ -90,7 +90,7 @@ class _LoginPageState extends State<LoginPage> {
                   SizedBox(height: 15),
                   ElevatedButton(
                     onPressed: () {
-                      licandoComClick();
+                      lidandoComClick();
                     },
                     child: Text('Calcular'),
                     style: ElevatedButton.styleFrom(
